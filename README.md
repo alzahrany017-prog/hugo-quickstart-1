@@ -1,62 +1,195 @@
-[![hugo](https://user-images.githubusercontent.com/43764894/223559747-e9d7f19d-91bf-46a9-a0cb-8d6a40d3cfa3.png)](https://ntl.fyi/3P9w1mr)
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الزهراني لخدمات الانشطة التجارية</title>
+  <style>
+    body{margin:0;font-family:Tahama,Arial;background:#f4f6f8;color:#333}
+    a{text-decoration:none;color:inherit}
+    /* شاشة البداية */
+    #splash{position:fixed;inset:0;background:#0f766e;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999}
+    #splash h1{margin:0;font-size:28px}
+    #splash span{margin-top:6px;font-size:14px;opacity:.9}
 
-# Hugo Quickstart Template   
+    header{background:#0f766e;color:#fff;padding:15px;position:sticky;top:0;display:none}
+    nav{display:flex;gap:15px;font-size:14px}
 
-This is a bare-bones Hugo project that has everything you need to quickly deploy it to [Netlify](https://netlify.com). 
+    section{padding:25px;display:none}
+    h2{margin-top:0}
 
-Hate reading, here's a video: https://youtu.be/t-tsRxxYdpk
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+    .card{background:#fff;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.08);padding:15px}
+    .card img{width:100%;border-radius:10px}
+    .price{color:#0f766e;font-weight:bold;margin:8px 0}
+    button{width:100%;padding:10px;border:none;border-radius:10px;background:#0f766e;color:#fff;cursor:pointer}
 
-Love reading, here's blog post: https://www.netlify.com/blog/deploy-your-hugo-app-quick/
+    #cart{position:fixed;bottom:15px;left:15px;background:#fff;border-radius:14px;padding:15px;width:260px;box-shadow:0 6px 15px rgba(0,0,0,.15)}
+    #cart ul{padding:0;list-style:none;font-size:13px}
 
-## Table of Contents:
+    footer{background:#111827;color:#fff;text-align:center;padding:15px;display:none}
+  @import url('https://fonts.googleapis.com/css2?family=Cairo&family=Tajawal&family=Almarai&family=Changa&family=El+Messiri&family=Amiri&family=IBM+Plex+Sans+Arabic&family=Lateef&family=Reem+Kufi&family=Rubik&family=Vazirmatn&family=Noto+Kufi+Arabic&family=Noto+Naskh+Arabic&family=Baloo+Bhaijaan+2&family=Markazi+Text&family=Scheherazade+New&family=Readex+Pro&family=Alexandria&family=Rakkas&display=swap');
 
-- [Quick Setup + Deploy Option](#quick-setup--deploy-option)
-- [Regular Setup](#regular-setup)
-  - [Cloning + Install Packages](#1-cloning--install-packages)
-  - [Deploying](#2-deploying)
-- [Styling](#styling)
-  - [Notes on Styling](#notes-on-styling)
-  - [Remove Styling](#remove-styling)
-- [Hugo + Netlify Resources](#hugo--netlify-resources)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-  - [Removing Cypress](#removing-cypress)
-- [Want to learn more?](#want-to-learn-more)
+:root{--main-font:'Cairo',sans-serif}
+body{font-family:var(--main-font)}
 
-## Quick Setup + Deploy Option
+#contact-icons{position:fixed;right:15px;bottom:90px;display:flex;flex-direction:column;gap:10px;z-index:999}
+#contact-icons a{background:#0f766e;color:#fff;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 6px 15px rgba(0,0,0,.2)}
+#contact-icons img{width:26px;height:26px}
 
-Click this button and it will help you create a new repo, create a new Netlify project, and deploy!
+.font-selector{position:fixed;left:15px;bottom:15px;background:#fff;padding:8px;border-radius:10px;box-shadow:0 6px 15px rgba(0,0,0,.15);font-size:12px}
+.font-selector select{padding:4px}
+</style>
+</head>
+<body>
 
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/hugo-quickstart)
+<!-- شاشة البداية -->
+<div id="splash">
+  <h1>الزهراني لخدمات الويب</h1>
+  <span>برمجيات</span>
+</div>
 
-## Regular Setup
+<header>
+  <h1>الزهراني لخدمات الانشطة التجارية</h1>
+  <nav>
+    <a href="#services">الخدمات</a>
+    <a href="#products">المنتجات</a>
+    <a href="#packages">الباقات</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+</header>
 
- ### 1. Cloning + Running Locally
+<!-- الخدمات -->
+<section id="services">
+  <h2>الخدمات الرقمية</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250">
+      <h3>إضافة النشاط في خرائط Google</h3>
+      <p>رفع وتوثيق نشاطك التجاري.</p>
+      <div class="price"></div>
+      <button onclick="add('خرائط Google',385)">إضافة للسلة</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250">
+      <h3>ربط واتساب بالأعمال</h3>
+      <p>زر واتساب مباشر للعملاء.</p>
+      <div class="price"></div>
+      <button onclick="add('واتساب',120)">إضافة للسلة</button>
+    </div>
+  </div>
+</section>
 
-  - Clone this repo with one of these options:
+<!-- المنتجات -->
+<section id="products">
+  <h2>المنتجات الرقمية</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250">
+      <h3>موقع تعريفي احترافي</h3>
+      <p>تصميم موقع صفحة واحدة.</p>
+      <div class="price"></div>
+      <button onclick="add('موقع تعريفي',900)">إضافة للسلة</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250">
+      <h3>متجر إلكتروني</h3>
+      <p>متجر جاهز للبيع.</p>
+      <div class="price"></div>
+      <button onclick="add('متجر إلكتروني',2500)">إضافة للسلة</button>
+    </div>
+  </div>
+</section>
 
-    - Click the 'Use this template' button at the top of the page
-    - Or via the command line `git clone https://github.com/netlify-templates/hugo-quickstart`
+<!-- الباقات -->
+<section id="packages">
+  <h2>باقات الأعمال</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>باقة الانطلاق</h3>
+      <p>خرائط Google + واتساب</p>
+      <div class="price"></div>
+      <button onclick="add('باقة الانطلاق',450)">إضافة للسلة</button>
+    </div>
+    <div class="card">
+      <h3>باقة الاحتراف</h3>
+      <p>موقع + خرائط + واتساب</p>
+      <div class="price"></div>
+      <button onclick="add('باقة الاحتراف',1200)">إضافة للسلة</button>
+    </div>
+  </div>
+</section>
 
- - Start the Hugo sever & check it out:
+<!-- تواصل -->
+<section id="contact">
+  <h2>تواصل معنا</h2>
+  <p>واتساب: 0553313667</p>
+  <p>البريد: alzahrany2010@gmail.com</p>
+</section>
 
-   - `hugo server -D`
-   - go to [http://localhost:1313/](http://localhost:1313/)
+<!-- السلة -->
+<div id="cart">
+  <strong>🛒 السلة</strong>
+  <ul id="items"></ul>
+  <div>الإجمالي: —</div>
+  <button onclick="checkout()">إتمام الطلب</button>
+</div>
 
-  > Alternatively, you can run this locally with [the Netlify CLI](https://docs.netlify.com/cli/get-started/)'s by running the `netlify dev` command for more options like receiving a live preview to share (`netlify dev --live`) and the ability to test [Netlify Functions](https://www.netlify.com/products/functions) and [redirects](https://docs.netlify.com/routing/redirects/). 
+<footer>
+  © 2025 الزهراني لخدمات الانشطة التجارية
+</footer>
 
-  ### 2. Deploying
-  - Install the Netlify CLI globally `npm install netlify-cli -g`
-    
-  - Run `hugo`
+<!-- أيقونات التواصل -->
+<div id="contact-icons">
+  <a href="tel:0553313667" title="اتصال">📞</a>
+  <a href="https://wa.me/966553313667" target="_blank" title="واتساب">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+  <a href="mailto:alzahrany2010@gmail.com" title="بريد">✉️</a>
+</div>
 
-  - Then use the `netlify deploy` for a deploy preview link or `netlify deploy --prod` to deploy to production
+<script>
+  let total=0;
+  function add(name,price){
+    const li=document.createElement('li');
+    li.textContent=name;
+    document.getElementById('items').appendChild(li);
+  }
+  function checkout(){alert('تم استلام طلبك، سيتم التواصل معك')}
+  setTimeout(()=>{
+    splash.style.display='none';
+    document.querySelector('header').style.display='block';
+    document.querySelectorAll('section,footer').forEach(s=>s.style.display='block');
+  },2000);
+</script>
 
-  Here are a few other ways you can deploy this template:
-    
-  - Use the Netlify CLI's create from template command `netlify sites:create-template hugo-quickstart` which will create a repo, Netlify project, and deploy it
-    
+<!-- تغيير الخط -->
+<div class="font-selector">
+  <label>الخط:</label>
+  <select onchange="document.documentElement.style.setProperty('--main-font',this.value)">
+    <option value="'Cairo',sans-serif">Cairo</option>
+    <option value="'Tajawal',sans-serif">Tajawal</option>
+    <option value="'Almarai',sans-serif">Almarai</option>
+    <option value="'Changa',sans-serif">Changa</option>
+    <option value="'El Messiri',sans-serif">El Messiri</option>
+    <option value="'Amiri',serif">Amiri</option>
+    <option value="'IBM Plex Sans Arabic',sans-serif">IBM Plex</option>
+    <option value="'Lateef',serif">Lateef</option>
+    <option value="'Reem Kufi',sans-serif">Reem Kufi</option>
+    <option value="'Rubik',sans-serif">Rubik</option>
+    <option value="'Vazirmatn',sans-serif">Vazirmatn</option>
+    <option value="'Noto Kufi Arabic',sans-serif">Noto Kufi</option>
+    <option value="'Noto Naskh Arabic',serif">Noto Naskh</option>
+    <option value="'Baloo Bhaijaan 2',cursive">Baloo</option>
+    <option value="'Markazi Text',serif">Markazi</option>
+    <option value="'Scheherazade New',serif">Scheherazade</option>
+    <option value="'Readex Pro',sans-serif">Readex</option>
+    <option value="'Alexandria',sans-serif">Alexandria</option>
+    <option value="'Rakkas',cursive">Rakkas</option>
+  </select>
+</div>
+</body>
+</html>    
   - If you want to utilize continuous deployment through GitHub webhooks, run the Netlify command `netlify init` to create a new project based on your repo or `netlify link` to connect your repo to an existing project
 
 ## Styling
